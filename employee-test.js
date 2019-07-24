@@ -4,53 +4,52 @@ var Employee = require('./emplyee');
 describe('Employee', function() {
 
   it.skip('should have a name', function() {
-    var fido = new Employee("Fido");
-    var baxter = new Employee("Baxter");
+    var marissa = new Employee("Marissa");
+    var octavio = new Employee("Octavio");
 
-    assert.equal(fido.name, "Fido");
-    assert.equal(baxter.name, "Baxter");
+    assert.equal(marissa.name, "Marissa");
+    assert.equal(octavio.name, "Octavio");
   });
 
-  it.skip('should be friendly', function() {
-    var fido = new Employee("Fido");
+  it.skip('should be helpful', function() {
+    var marissa = new Employee("Marissa");
 
-    assert.equal(fido.personality, "friendly");
+    assert.equal(marissa.personality, "helpful");
   });
 
-  it.skip('should start as a newborn pup', function() {
-    var fido = new Employee("Fido");
+  it.skip('should start as a new employee', function() {
+    var marissa = new Employee("Marissa");
 
-    assert.equal(fido.age, 0);
+    assert.equal(marissa.monthsOfEmployment, 0);
   });
 
-  it.skip('should grow up, in human years', function() {
-    var fido = new Employee("Fido");
+  it.skip('should keep track of time employed', function() {
+    var marissa = new Employee("Marissa");
 
-    fido.growUp();
-    fido.growUp();
-    fido.growUp();
-    assert.equal(fido.age, 21);
+    marissa.work();
+    marissa.work();
+    marissa.work();
+    assert.equal(marissa.monthsOfEmployment, 12);
   });
 
-  it.skip('should be considered a puppy when 7 human years or younger', function() {
-    var fido = new Employee("Fido");
+  it.skip('should be onboarding until the 6 month workiversary', function() {
+    var marissa = new Employee("Marissa");
 
-    assert.equal(fido.puppy, true);
-    fido.growUp();
-    assert.equal(fido.puppy, true);
-    fido.growUp();
-    assert.equal(fido.puppy, false);
+    marissa.work();
+    assert.equal(marissa.onboarding, true);
+    marissa.work();
+    assert.equal(marissa.onboarding, false);
   });
 
-  it.skip('should be popular if name starts with the letter B', function() {
-    var baxter = new Employee("Baxter");
-    var bella = new Employee("Bella");
-    var daisy = new Employee("Daisy");
-    var fido = new Employee("Fido");
+  it.skip('should be on call if their name is less than 6 characters long', function() {
+    var sally = new Employee("Sally");
+    var marissa = new Employee("Marissa");
+    var octavio = new Employee("Octavio");
 
-    assert.equal(baxter.popular, true);
-    assert.equal(bella.popular, true);
-    assert.equal(daisy.popular, false);
-    assert.equal(fido.popular, false);
+    assert.equal(sall.onCall, true);
+    assert.equal(marissa.onCall, false);
+    assert.equal(octavio.onCall, false);
   });
+
+
 });
