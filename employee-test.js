@@ -51,5 +51,4 @@ describe('Employee', function() {
     assert.equal(octavio.onCall, false);
   });
 
-
 });
